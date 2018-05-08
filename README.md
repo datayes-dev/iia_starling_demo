@@ -6,7 +6,7 @@
 #### 1.依赖镜像：
 
     repositories {
-
+        jcenter()
         maven { url "https://raw.github.com/datayes-dev/android_maven/master" }
         maven { url "https://raw.github.com/datayes-dev/iia_android/master" }
         maven { url "https://jitpack.io" }
@@ -17,58 +17,70 @@
 以下依赖是必须的，但是版本可以按照自己的项目情况修改
 
     ///////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////
-    // sdk依赖原生
-
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
-
-    ///////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////
-    // sdk依赖通联
-
-    compile 'com.datayes:common-view:0.1.26'
-    compile 'com.datayes:common-chart:0.3.0'
-    compile('com.datayes.iia:module-common:0.1.15@aar')
-    compile('com.datayes.iia:starling:0.1.18@aar')
-
-    ///////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////
-    // sdk外部依赖
-
-    // 路由
-    compile 'com.alibaba:arouter-api:1.3.1'
-
-    // RxJava
-    compile 'io.reactivex.rxjava2:rxjava:2.1.6'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-
-    // rx生命周期库
-    compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
-    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
-
-    // rx显示层库
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
-
-    // 下拉刷新组件
-    compile 'in.srain.cube:ultra-ptr:1.0.11'
-
-    // 网络
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
-
-    // butterknife
-    compile 'com.jakewharton:butterknife:8.6.0'
-
-    // greendao
-    compile 'org.greenrobot:greendao:3.2.2'
-
-    // WebSocket
-    compile "org.java-websocket:Java-WebSocket:1.3.8"
+        ///////////////////////////////////////////////////////////////////
+        // sdk依赖原生
+    
+        compile 'com.android.support:support-v4:25.3.1'
+        compile 'com.android.support:appcompat-v7:25.3.1'
+        compile 'com.android.support:design:25.3.1'
+        compile 'com.android.support:multidex:1.0.1'
+        compile 'com.android.support:cardview-v7:25.3.1'
+    
+        ///////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////
+        // sdk依赖通联
+    
+        // 通联工具包
+        compile 'com.datayes:common-utils:0.1.14'
+        // 通联网络
+        compile 'com.datayes:common-net:0.1.18'
+        // 通联存储
+        compile 'com.datayes:common-storage:0.1.9'
+        // 通联事件
+        compile 'com.datayes:common-bus:0.1.11'
+        // 通联通用view
+        compile 'com.datayes:common-view:0.1.27'
+        // 通联通用绘图
+        compile 'com.datayes:common-chart:0.3.5'
+        // 灵机智投基础
+        compile('com.datayes.iia:module-common:0.1.27@aar')
+        // 智能盯盘sdk
+        compile('com.datayes.iia:starling:0.1.25@aar')
+    
+        ///////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////
+        // sdk外部依赖
+    
+        // 路由
+        compile 'com.alibaba:arouter-api:1.3.1'
+    
+        // RxJava
+        compile 'io.reactivex.rxjava2:rxjava:2.1.6'
+        compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    
+        // rx生命周期库
+        compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
+        compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    
+        // rx显示层库
+        compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    
+        // 下拉刷新组件
+        compile 'in.srain.cube:ultra-ptr:1.0.11'
+    
+        // 网络
+        compile 'com.squareup.retrofit2:retrofit:2.3.0'
+        compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+        compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    
+        // butterknife
+        compile 'com.jakewharton:butterknife:8.6.0'
+    
+        // greendao
+        compile 'org.greenrobot:greendao:3.2.2'
+    
+        // WebSocket
+        compile "org.java-websocket:Java-WebSocket:1.3.8"
     
 
 
@@ -165,6 +177,23 @@
         "",
         "");
     
+### (五).智能盯盘入口    
+
+个股异动入口view (IiaStarlingStockChgView)
+
+    // 必须调用start开始才会启动长链接
+    IiaStarlingStockChgView.start();
+    
+    // 必须调用stop才会停止长链接
+    // 未及时断开会产生不必要的性能消耗
+    IiaStarlingStockChgView.stop();
 
 
+板块异动入口view (IiaStarlingAreaChangeView)
 
+    // 必须调用start开始才会启动长链接
+    IiaStarlingAreaChangeView.start();
+    
+    // 必须调用stop才会停止长链接
+    // 未及时断开会产生不必要的性能消耗
+    IiaStarlingAreaChangeView.stop();
