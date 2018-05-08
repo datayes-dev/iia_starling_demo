@@ -34,6 +34,7 @@ public class YiChuangExternalImpl implements IExternalProvider {
 
     @Override
     public String getWebSocketUrl() {
+        // TODO 获取长链接url, 需要保证url token的正确性
         return Test.INSTANCE.getWebSocketUrl();
     }
 
