@@ -7,11 +7,15 @@ android {
 
     defaultConfig {
         applicationId "com.datayes.iiastarlingdemo"
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
     }
     buildTypes {
         release {
@@ -50,9 +54,9 @@ dependencies {
     // 通联通用绘图
     compile 'com.datayes:common-chart:0.3.5'
     // 灵机智投基础
-    compile('com.datayes.iia:module-common:0.1.27@aar')
+    compile('com.datayes.iia:module-common:0.2.2@aar')
     // 智能盯盘sdk
-    compile('com.datayes.iia:starling:0.1.25@aar')
+    compile('com.datayes.iia:starling:0.1.26@aar')
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////

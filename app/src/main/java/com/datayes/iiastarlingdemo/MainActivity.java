@@ -2,7 +2,12 @@ package com.datayes.iiastarlingdemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
+import com.datayes.common_storage.SPUtils;
+import com.datayes.common_utils.toast.ToastUtils;
+import com.datayes.iia.starling.Starling;
 import com.datayes.iia.starling.main.area.IiaStarlingAreaChangeView;
 import com.datayes.iia.starling.main.stock.IiaStarlingStockChgView;
 
@@ -24,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mIiaStarlingStockChgView = (IiaStarlingStockChgView) findViewById(R.id.stock_change_view);
         mIiaStarlingAreaChangeView = (IiaStarlingAreaChangeView) findViewById(R.id.area_change_view);
+
+        initTest();
     }
 
     @Override
@@ -45,5 +52,53 @@ public class MainActivity extends AppCompatActivity {
         mIiaStarlingAreaChangeView.stop();
     }
 
+
+
+
+
+
+
+
+
+    private void initTest() {
+
+        TextView textView = (TextView) findViewById(R.id.tv_btn);
+
+        String environment = (String) SPUtils.getInstance()
+                .get(getApplicationContext(), "test_environment", "", Starling.INSTANCE);
+
+        if ("qa".equals(environment)) {
+
+            textView.setText("qa");
+
+        } else {
+
+            textView.setText("stg");
+        }
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String environment = (String) SPUtils.getInstance()
+                        .get(getApplicationContext(), "test_environment", "", Starling.INSTANCE);
+
+                if ("qa".equals(environment)) {
+
+                    environment = "stg";
+
+                } else {
+
+                    environment = "qa";
+                }
+
+                SPUtils.getInstance().put(getApplicationContext(), "test_environment", environment, Starling.INSTANCE);
+
+                ToastUtils.showLongToast(getApplicationContext(), "切换环境请重启");
+
+                initTest();
+            }
+        });
+    }
 
 }

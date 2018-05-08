@@ -16,12 +16,12 @@ public class App extends BaseApp {
     public void onCreate() {
         super.onCreate();
 
+        Test.INSTANCE.init(this);
+
         // 初始化智能盯盘
         Starling.INSTANCE
                 // baseurl
-                .setBaseUrl("http://fcsc-staring.respool.wmcloud-qa.com")
-                // 长链接url
-                .setWebSocketUrl("ws://fcsc-staring.respool.wmcloud-qa.com:8722/ws?user=xxx&token=xxx")
+                .setBaseUrl(Test.INSTANCE.getBaseUrl())
                 // okhttp用户拦截器
                 .setUserInterceptor(new AuthorizationInterceptor())
                 // 设置回调

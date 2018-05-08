@@ -20,6 +20,8 @@ public class YiChuangExternalImpl implements IExternalProvider {
 
     @Override
     public List<StockBean> getSelfStockList() {
+
+        // TODO 获取自选股列表，这里调用比较频繁，最好是取缓存
         return getStockBeans();
     }
 
@@ -28,6 +30,11 @@ public class YiChuangExternalImpl implements IExternalProvider {
 
         // TODO  打开股票详情页面
         ToastUtils.showShortToast(context, "打开股票详情页ticker: " + ticker);
+    }
+
+    @Override
+    public String getWebSocketUrl() {
+        return Test.INSTANCE.getWebSocketUrl();
     }
 
     /////////////////////////////////////////////////////////////
@@ -124,4 +131,6 @@ public class YiChuangExternalImpl implements IExternalProvider {
 
         return list;
     }
+
+
 }
