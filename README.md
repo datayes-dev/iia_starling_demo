@@ -97,7 +97,7 @@
             // 初始化
             .init(this, null, true);
 
-    // 开始同步模块数据，建议使用模块之前就同步好数据（如：app启动时，或者app同步数据的时候）
+    // 开始同步模块数据，建议使用模块之前就同步好数据（如：app启动时，或者app同步数据的时候，调用之前保证自选股数据完整）
     Starling.INSTANCE.startSyncData(getApplicationContext());
     
     
