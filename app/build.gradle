@@ -37,10 +37,22 @@ dependencies {
     ///////////////////////////////////////////////////////////////////
     // sdk依赖通联
 
-    compile 'com.datayes:common-view:0.1.26'
-    compile 'com.datayes:common-chart:0.3.0'
-    compile('com.datayes.iia:module-common:0.1.15@aar')
-    compile('com.datayes.iia:starling:0.1.18@aar')
+    // 通联工具包
+    compile 'com.datayes:common-utils:0.1.14'
+    // 通联网络
+    compile 'com.datayes:common-net:0.1.18'
+    // 通联存储
+    compile 'com.datayes:common-storage:0.1.9'
+    // 通联事件
+    compile 'com.datayes:common-bus:0.1.11'
+    // 通联通用view
+    compile 'com.datayes:common-view:0.1.27'
+    // 通联通用绘图
+    compile 'com.datayes:common-chart:0.3.5'
+    // 灵机智投基础
+    compile('com.datayes.iia:module-common:0.1.27@aar')
+    // 智能盯盘sdk
+    compile('com.datayes.iia:starling:0.1.25@aar')
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////

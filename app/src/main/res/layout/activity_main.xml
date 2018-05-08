@@ -3,11 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.datayes.iiastarlingdemo.MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <com.datayes.iia.starling.main.area.IiaStarlingAreaChangeView
+        android:id="@+id/area_change_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp" />
+
+    <com.datayes.iia.starling.main.stock.IiaStarlingStockChgView
+        android:id="@+id/stock_change_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp" />
 
 </LinearLayout>

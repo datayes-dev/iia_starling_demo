@@ -21,7 +21,7 @@ public class App extends BaseApp {
                 // baseurl
                 .setBaseUrl("http://fcsc-staring.respool.wmcloud-qa.com")
                 // 长链接url
-                .setWebSocketUrl("ws://fcsc-staring.respool.wmcloud-qa.com:8722/ws?user=10061&token=123")
+                .setWebSocketUrl("ws://fcsc-staring.respool.wmcloud-qa.com:8722/ws?user=xxx&token=xxx")
                 // okhttp用户拦截器
                 .setUserInterceptor(new AuthorizationInterceptor())
                 // 设置回调

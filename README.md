@@ -93,7 +93,7 @@
     
 ### (三).接口用户权限
 
-用户权限是基于okhttp拦截器，可以参考（AuthorizationInterceptor）
+用户权限是基于okhttp拦截器，可以参考Demo（AuthorizationInterceptor）
 
 
     // 初始化智能盯盘
@@ -129,7 +129,7 @@
 
 ### (四).SDK需要实现的接口
 
-接入者需要实现IExternalProvider接口，可以参考（YiChuangExternalImpl）
+接入者需要实现IExternalProvider接口，可以参考Demo（YiChuangExternalImpl）
         
     // 初始化智能盯盘
     Starling.INSTANCE
@@ -163,7 +163,7 @@
         "E", // 证券类型(股票，债券)
         "L",// L-上市，S-暂停，DE-终止上市，UN-未上市
         "",
-        ""
+        "");
     
 
 
