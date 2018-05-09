@@ -20,7 +20,7 @@ public class AuthorizationInterceptor implements Interceptor {
         Request.Builder builder = chain.request().newBuilder();
 
         // TODO 用户id
-        builder.addHeader("DatayesPrincipalName", "11111111");
+        builder.addHeader("DatayesPrincipalName", Test.INSTANCE.getTestUserId());
 
         // TODO deviceId
         builder.addHeader("deviceId", "deviceId");

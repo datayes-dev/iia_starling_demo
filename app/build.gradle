@@ -56,7 +56,7 @@ dependencies {
     // 灵机智投基础
     compile('com.datayes.iia:module-common:0.2.2@aar')
     // 智能盯盘sdk
-    compile('com.datayes.iia:starling:0.1.26@aar')
+    compile('com.datayes.iia:starling:0.1.27@aar')
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////
