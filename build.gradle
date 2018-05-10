@@ -4,13 +4,14 @@ buildscript {
     
     repositories {
         jcenter()
+        google()
     }
     dependencies {
         // gradle
-        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'com.android.tools.build:gradle:3.0.0'
 
         // apt
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 
     }
 }
@@ -18,7 +19,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-
+        google()
         maven { url "https://raw.github.com/datayes-dev/android_maven/master" }
         maven { url "https://raw.github.com/datayes-dev/iia_android/master" }
         maven { url "https://jitpack.io" }
