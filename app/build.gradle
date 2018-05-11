@@ -31,9 +31,9 @@ dependencies {
     ///////////////////////////////////////////////////////////////////
     // sdk依赖原生
 
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
+//    compile 'com.android.support:appcompat-v7:26.1.0'
+//    compile 'com.android.support:design:26.1.0'
+//    compile 'com.android.support:cardview-v7:26.1.0'
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////
@@ -52,13 +52,13 @@ dependencies {
     // 通联通用绘图
     compile 'com.datayes:common-chart:0.3.5'
     // 灵机智投基础
-    compile('com.datayes.iia:module-common:0.3.4@aar')
-    // 智能盯盘自选股接口
+    compile('com.datayes.iia:module-common:0.3.5@aar')
+    // 灵机智投自选股接口
     compile('com.datayes.iia:selfstock_api:0.1.2@aar')
-    // 智能盯盘股票服务接口
+    // 灵机智投股票服务接口
     compile('com.datayes.iia:servicestock_api:0.1.2@aar')
-    // 智能盯盘sdk
-    compile('com.datayes.iia:starling:0.2.0@aar')
+    // 灵机智投智能盯盘sdk
+    compile('com.datayes.iia:starling:0.2.1@aar')
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////
