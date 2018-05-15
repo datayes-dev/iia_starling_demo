@@ -61,8 +61,8 @@ public enum Test {
             SPUtils.getInstance().put(context, "test_environment", environment, Starling.INSTANCE);
         }
 
-        baseUrl = "http://fcsc-staring.respool.wmcloud-stg.com";
-        webSocketUrl = "ws://fcsc-staring.respool.wmcloud-stg.com:8722/ws?user=" + testUserId + "&token=" + testUserId;
+        baseUrl = "https://gw.wmcloud-stg.com";
+        webSocketUrl = "ws://101.226.198.90:8722/ws?user=" + testUserId + "&token=" + testUserId;
 
         if ("qa".equals(environment)) {
 

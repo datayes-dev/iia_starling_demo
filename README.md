@@ -47,7 +47,7 @@
     // 智能盯盘股票服务接口
     compile('com.datayes.iia:servicestock_api:0.1.2@aar')
     // 智能盯盘sdk
-    compile('com.datayes.iia:starling:0.2.2@aar')
+    compile('com.datayes.iia:starling:0.2.5@aar')
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////
