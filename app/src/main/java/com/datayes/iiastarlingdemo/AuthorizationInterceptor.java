@@ -17,10 +17,16 @@ public class AuthorizationInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Request.Builder builder = chain.request().newBuilder();
+
+        Request request = chain.request();
+//        String url = request.url().toString();
+//        url = url.replace("/fcsc/staring", "/staring");
+
+        Request.Builder builder = request.newBuilder();
 
         // TODO 用户id
         builder.addHeader("DatayesPrincipalName", Test.INSTANCE.getTestUserId());
+//        builder.url(url);
 
         // TODO deviceId
         builder.addHeader("deviceId", "deviceId");

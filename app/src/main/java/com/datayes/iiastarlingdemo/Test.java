@@ -6,8 +6,6 @@ import android.text.TextUtils;
 import com.datayes.common_storage.SPUtils;
 import com.datayes.iia.starling.Starling;
 
-import java.util.Random;
-
 /**
  * 测试
  * Created by shenen.gao on 2018/5/8.
@@ -42,14 +40,16 @@ public enum Test {
     public void init(Context context) {
 
         // 这里只是方便测试，随机一个用户id
-        testUserId = (String) SPUtils.getInstance()
-                .get(context, "testUserId", "", Starling.INSTANCE);
+//        testUserId = (String) SPUtils.getInstance()
+//                .get(context, "testUserId", "", Starling.INSTANCE);
+//
+//        if (TextUtils.isEmpty(testUserId)) {
+//
+//            testUserId = String.valueOf(Math.abs(new Random(System.currentTimeMillis()).nextInt()));
+//            SPUtils.getInstance().put(context, "testUserId", testUserId, Starling.INSTANCE);
+//        }
 
-        if (TextUtils.isEmpty(testUserId)) {
-
-            testUserId = String.valueOf(Math.abs(new Random(System.currentTimeMillis()).nextInt()));
-            SPUtils.getInstance().put(context, "testUserId", testUserId, Starling.INSTANCE);
-        }
+        testUserId = "testtestessdklfjaslkdjf";
 
 
         // 测试环境切换
@@ -66,7 +66,7 @@ public enum Test {
 
         if ("qa".equals(environment)) {
 
-            baseUrl = "http://fcsc-staring.respool.wmcloud-qa.com";
+            baseUrl = "http://staringwizard-service.respool.wmcloud-qa.com";
             webSocketUrl = "ws://fcsc-staring.respool.wmcloud-qa.com:8722/ws?user=" + testUserId + "&token=" + testUserId;
         }
 
