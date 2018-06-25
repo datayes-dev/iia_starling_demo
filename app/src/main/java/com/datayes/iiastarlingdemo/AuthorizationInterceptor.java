@@ -19,17 +19,11 @@ public class AuthorizationInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
 
         Request request = chain.request();
-//        String url = request.url().toString();
-//        url = url.replace("/fcsc/staring", "/staring");
 
         Request.Builder builder = request.newBuilder();
 
-        // TODO 用户id
-        builder.addHeader("DatayesPrincipalName", Test.INSTANCE.getTestUserId());
-//        builder.url(url);
-
-        // TODO deviceId
-        builder.addHeader("deviceId", "deviceId");
+        builder.addHeader("DatayesPrincipalName", "一创 diviceId");
+        builder.addHeader("userCert", "一创 用户token");
 
         return chain.proceed(builder.build());
     }
