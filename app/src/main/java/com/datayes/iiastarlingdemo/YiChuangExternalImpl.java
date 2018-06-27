@@ -33,6 +33,16 @@ public class YiChuangExternalImpl implements IExternalProvider {
     }
 
     @Override
+    public String getAppType() {
+        return "android";
+    }
+
+    @Override
+    public String getAppKey() {
+        return "11";
+    }
+
+    @Override
     public String getWebSocketUrl() {
         // TODO 获取长链接url, 需要保证url token的正确性
         return Test.INSTANCE.getWebSocketUrl();
