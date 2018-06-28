@@ -22,8 +22,8 @@ public class AuthorizationInterceptor implements Interceptor {
 
         Request.Builder builder = request.newBuilder();
 
-        builder.addHeader("DatayesPrincipalName", "一创 diviceId");
-        builder.addHeader("userCert", "一创 用户token");
+        builder.addHeader("DatayesPrincipalName", "sdfasdfsadfsdfsadf");
+        builder.addHeader("userCert", "sdfsdfsdfsd");
 
         return chain.proceed(builder.build());
     }
