@@ -35,19 +35,19 @@
     // 通联存储
     compile 'com.datayes:common-storage:0.2.0'
     // 通联事件
-    compile 'com.datayes:common-bus:0.2.0'
+    compile 'com.datayes:common-bus:0.2.4'
     // 通联通用view
-    compile 'com.datayes:common-view:0.2.1'
+    compile 'com.datayes:common-view:0.2.8'
     // 通联通用绘图
-    compile 'com.datayes:common-chart:0.3.5'
+    compile 'com.datayes:common-chart:0.3.21'
     // 灵机智投基础
     compile('com.datayes.iia:module-common:0.3.5@aar')
-    // 智能盯盘自选股接口
+    // 灵机智投自选股接口
     compile('com.datayes.iia:selfstock_api:0.1.2@aar')
-    // 智能盯盘股票服务接口
-    compile('com.datayes.iia:servicestock_api:0.1.2@aar')
-    // 智能盯盘sdk
-    compile('com.datayes.iia:starling:0.2.5@aar')
+    // 灵机智投股票服务接口
+    compile('com.datayes.iia:servicestock_api:0.1.3@aar')
+    // 灵机智投智能盯盘sdk
+    compile('com.datayes.iia:starling:0.3.29@aar')
 
     ///////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////

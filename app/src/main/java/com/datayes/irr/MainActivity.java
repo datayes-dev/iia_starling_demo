@@ -1,4 +1,4 @@
-package com.datayes.iiastarlingdemo;
+package com.datayes.irr;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mIiaStarlingStockChgView = (IiaStarlingStockChgView) findViewById(R.id.stock_change_view);
-        mIiaStarlingAreaChangeView = (IiaStarlingAreaChangeView) findViewById(R.id.area_change_view);
+        setContentView(com.datayes.irr.R.layout.activity_main);
+        mIiaStarlingStockChgView = (IiaStarlingStockChgView) findViewById(com.datayes.irr.R.id.stock_change_view);
+        mIiaStarlingAreaChangeView = (IiaStarlingAreaChangeView) findViewById(com.datayes.irr.R.id.area_change_view);
 
         initTest();
     }
@@ -53,16 +53,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
     private void initTest() {
 
-        TextView textView = (TextView) findViewById(R.id.tv_btn);
+        TextView textView = (TextView) findViewById(com.datayes.irr.R.id.tv_btn);
 
         String environment = (String) SPUtils.getInstance()
                 .get(getApplicationContext(), "test_environment", "", Starling.INSTANCE);
