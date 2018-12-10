@@ -2,8 +2,6 @@ package com.datayes.irr;
 
 import com.datayes.common_view.base.BaseApp;
 import com.datayes.iia.starling.Starling;
-import com.umeng.commonsdk.UMConfigure;
-import com.umeng.socialize.PlatformConfig;
 
 /**
  * 功能：
@@ -48,9 +46,9 @@ public class App extends BaseApp {
     private void initUment() {
 
         // 打开统计SDK调试模式
-        UMConfigure.setLogEnabled(true);
-        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "");
-        PlatformConfig.setWeixin("wx51141d33827a8f56", "1473542b7f61cd96a75b8b37a5971276");
+//        UMConfigure.setLogEnabled(true);
+//        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "");
+//        PlatformConfig.setWeixin("wx51141d33827a8f56", "1473542b7f61cd96a75b8b37a5971276");
     }
 
 }

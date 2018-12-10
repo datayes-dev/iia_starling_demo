@@ -32,7 +32,7 @@ dependencies {
     // sdk依赖原生
     api fileTree(include: ['*.jar'], dir: 'libs')
 
-    compile 'com.umeng.sdk:common:1.5.3'
+//    compile 'com.umeng.sdk:common:1.5.3'
 
     compile 'com.android.support:appcompat-v7:26.1.0'
 //    compile 'com.android.support:design:26.1.0'
