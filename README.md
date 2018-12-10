@@ -41,7 +41,7 @@
     // 通联通用绘图
     compile 'com.datayes:common-chart:0.3.21'
     // 灵机智投基础
-    compile('com.datayes.iia:module-common:0.3.5@aar')
+    compile('com.datayes.iia:module-common:0.4.5@aar')
     // 灵机智投自选股接口
     compile('com.datayes.iia:selfstock_api:0.1.2@aar')
     // 灵机智投股票服务接口
